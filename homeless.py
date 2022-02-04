@@ -1,12 +1,12 @@
 import random
 """actividad en clase del bagabundo"""
 class Homeless:
-    def __innit__(self, name):
+    def __init__(self, name):
         self.name = name
 
 class StandarHomeless(Homeless):
     def __innit__(self, name):
-        super().__innit__(name)
+        super().__init__(name)
 
     def walk(self):
         return random.choice([(1,0),(-1,0),(0,1),(0,-1)])
