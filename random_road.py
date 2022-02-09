@@ -1,4 +1,6 @@
-from homeless import StandarHomeless 
+from homeless import RightHomeless, StandarHomeless 
+from homeless import leftHomeless 
+
 from field import Field
 from coordinate import Coordinate
 from bokeh.plotting import figure,output_file,show
@@ -45,4 +47,4 @@ def main(walk_distance,number_of_attemps,type_homeless):
 if __name__ == "__main__":
     walk_distance = [10,100,1000,10000]
     number_of_attemps = 100
-    main(walk_distance,number_of_attemps,StandarHomeless)
+    main(walk_distance,number_of_attemps,RightHomeless)

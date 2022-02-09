@@ -44,6 +44,15 @@ class leftHomeless(Homeless):
         self.y +=dy
         return [self.x,self.y]
 
+
+class RightHomeless(Homeless):
+    def __init__(self, name):
+        super().__init__(name)
+    def walk(self):
+        dx,dy = random.choice([(0,50000000),(0,-10000000),(1000000,0),(-100000,0)])
+        self.x +=dx
+        self.y +=dy
+        return [self.x,self.y]
 """Super es para heredar de la clase padre"""
 
 
