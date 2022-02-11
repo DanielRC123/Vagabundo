@@ -10,7 +10,7 @@ class Homeless:
     def posicion (self):
         return (self.x,self.y)
 
-    def distance(self,other_coordinate):
+    def distance(self):
         return (self.x**2 + self.y**2)**0.5
 
 class StandarHomeless(Homeless):

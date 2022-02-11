@@ -27,7 +27,7 @@ def walking(homeless,steps,type_homeless):
     know_homeless = know_type_homeless(type_homeless)
     graph(x_graph,y_graph,know_homeless,steps)
 
-    return homeless.distance_origin()
+    return homeless.distance()
 
 def simulate_walk(steps,number_of_attemps,type_homeless):
     homeless =[]
@@ -57,7 +57,7 @@ def main(walk_distance,number_of_attemps,type_homeless):
         distance_average =round(sum(distance)/len(distance))
         distance_max = max(distance)
         distance_min = min(distance)
-        print(f"{type_homeless.__name__}caminata aleatoria")
+        print(f"{type_homeless.__name__} caminata aleatoria")
         print(f"Media = {distance_average}")
         print(f"Max = {distance_max}")
         print(f"Min = {distance_min}")
