@@ -65,4 +65,4 @@ def main(walk_distance,number_of_attemps,type_homeless):
 if __name__ == "__main__":
     walk_distance = [100]
     number_of_attemps = 3
-    main(walk_distance,number_of_attemps,StandarHomeless)
+    main(walk_distance,number_of_attemps,ModerateHomeless)
