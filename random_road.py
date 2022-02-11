@@ -1,14 +1,14 @@
-from homeless import StandarHomeless,ModerateHomeless
+from homeless import StandarHomeless,ModerateHomeless, leftHomeless
 from field import Field
 from coordinate import Coordinate
 from bokeh.plotting import figure,output_file,show
 
 
 def know_type_homeless(type_homeless):
-    if type_homeless.__name__ == StandarHomeless:
+    if type_homeless.__name__ == "StandarHomeless":
         return "Vagabundo Estandar"
-    elif type_homeless.__name__ == ModerateHomeless:
-        return "Vagabundo Estandar"
+    elif type_homeless.__name__ == "ModerateHomeless":
+        return "Vagabundo Moderado"
 
     else:
         return "Vagabundo Izquierdista"
@@ -27,7 +27,7 @@ def walking(homeless,steps,type_homeless):
     know_homeless = know_type_homeless(type_homeless)
     graph(x_graph,y_graph,know_homeless,steps)
 
-    return homeless.distance_origin()
+    return homeless.distance()
 
 def simulate_walk(steps,number_of_attemps,type_homeless):
     homeless =[]
@@ -58,11 +58,14 @@ def main(walk_distance,number_of_attemps,type_homeless):
         distance_max = max(distance)
         distance_min = min(distance)
         print(f"{type_homeless.__name__}caminata aleatoria")
+        print(f"distancia = {distance}")
         print(f"Media = {distance_average}")
         print(f"Max = {distance_max}")
         print(f"Min = {distance_min}")
 
 if __name__ == "__main__":
     walk_distance = [100]
-    number_of_attemps = 3
+    number_of_attemps = 1
     main(walk_distance,number_of_attemps,StandarHomeless)
+    main(walk_distance,number_of_attemps,ModerateHomeless)
+    main(walk_distance,number_of_attemps,leftHomeless)
